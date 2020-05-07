@@ -7,7 +7,7 @@ pipeline
     {
       steps
       {
-        sh 'aws cloudformation create-stack --stack-name EC2InstCreationstack --template-body file://EC2InstCFT.json'
+        sh 'aws cloudformation create-stack --stack-name EC2InstCreationstack --template-body file://EC2InstCFT.json --region "us-east-1"'
       }
     }
   }
