@@ -7,9 +7,11 @@ pipeline
     {
         steps
        {
-          withAWS(credentials: 'CreateCFT', region: 'us-east-1') {
+          withAWS(credentials: 'CreateCFT', region: 'us-east-1')
+          {
             sh 'aws configure list'
-        }  
+          }  
+       }
     }
     stage ('submit cloud formation template')
     {
